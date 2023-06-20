@@ -1,9 +1,117 @@
+#import "plugins/typst-boxes.typ": *
+
 #set heading(numbering: "1.")
 #set text(
   size: 10pt,
 )
 
 #outline()
+
+= Terms
+
+
+
+= Radio
+
+== Protocol
+
+=== Hail
+
+Hailing is done on channel 16.
+
+#colorbox(
+  title: [Hail],
+  color: "black",
+)[
+    / Indefatigable: _Renown_, _Renown_, _Renown_, this is _Indefatigable_, _Indefatigable_, _Indefatigable_. Over.
+    / Renown: _Indefatigable_, this is _Renown_. Over.
+    / Indefatigable: _Renown_, this is _Indefatigable_. Channel 72 please. Channel seven two. Over.
+    / Renown: _Indefatigable_, this is _Renown_. Understood. Channel 72. Over.
+]
+
+=== Distress (Mayday)
+
+Should only be sent in case of grave an imminent danger to life or vessel. Use channel *16* on high power.
+
+
+#colorbox(
+  title: [Distress call],
+  color: "black",
+)[
+    Mayday Mayday Mayday \
+    This is _Indefatigable_ _Indefatigable_ _Indefatigable_ \
+    Call sign ABCD1 MMSI number 123456789 \
+
+    Mayday _Indefatigable_ \
+    Call sign ABCD1 MMSI number 123456789 \
+    My position is 12 degrees 34.56 minutes north, 012 degrees 34.56 minutes east. \
+    We are sinking. \
+    We require immediate assistance. \
+    There are 5 people on board. \
+    We are abandoning to the live raft. \
+    Over.
+]
+
+=== Urgency (Panpan)
+
+Should be sent if the calling station has a very urgent message concerning the safety of a vessel or person. Must be addressed to someone (e.g. coast guard, or all stations).
+
+#colorbox(
+  title: [Urgency call],
+  color: "black",
+)[
+    Panpan Panpan Panpan \
+    All stations all stations all stations \
+    This is _Indefatigable_ _Indefatigable_ _Indefatigable_ \
+    Call sign ABCD1 MMSI number 123456789 \
+
+    My position is 12 degrees 34.56 minutes north, 012 degrees 34.56 minutes east. \
+    We have are adrift. \
+    We require a tow. \
+    There are 5 people on board. \
+    Over.
+]
+
+=== Safety (Securitay)
+
+#colorbox(
+  title: [Safety call],
+  color: "black",
+)[
+    Securitay Securitay Securitay \
+    All stations all stations all stations \
+    This is _Indefatigable_ _Indefatigable_ _Indefatigable_ \
+    Call sign ABCD1 MMSI number 123456789 \
+
+    My position is 12 degrees 34.56 minutes north, 012 degrees 34.56 minutes east. \
+    We have sighted a floating shipping container.
+    Over.
+]
+
+=== Specifying position
+
+- Using coordinates: E.g. $12#sym.degree 34.56' N, 012#sym.degree 34.56' E$; read: _one two degrees three four decimal five six minutes north, zero one two degrees three four decimal fice six minutes east_
+- Using a bearing: Read bearing from object, then distance. E.g. _one six one degrees from Punta Rasca, two decimal one miles_
+
+
+
+
+== VHF (Very High Frequency)
+
+VHF does not bend around obstacles. The horizon of a VHF antenna is approximately $s = 3 * sqrt(h)$, where $s$ is the horizon in nautical miles and $h$ is the height of the antenna in metres.
+
+Two antennas are in range of each other if their horizons overlap. The total range is approximately $s = 3 * (sqrt(h_a) + sqrt(h_b))$.
+
+High power is usually $25 W$ and low power is usually $1 W$.
+
+=== Channels
+
+- Distress, safety and calling: *16*
+- Inter-ship: *6*, *8*, *72*, *77*
+- Port operations: *11*, *12*, *14*
+
+
+
 
 = Morse code
 
@@ -83,22 +191,22 @@
             columns: (35pt, auto, auto),
             rows: 35pt,
             align: left+horizon,
-            image("res/flags/ICS_Alfa.svg"),[*A* - Alpha],[Diver down, keep clear],
-            image("res/flags/ICS_Bravo.svg"),[*B* - Bravo],[Carrying dangerous goods],
+            image("res/flags/ICS_Alfa.svg"),[*A* - Alpha],[I have a diver down, keep clear],
+            image("res/flags/ICS_Bravo.svg"),[*B* - Bravo],[I am carrying dangerous goods],
             image("res/flags/ICS_Charlie.svg"),[*C* - Charlie],[Affirmative],
-            image("res/flags/ICS_Delta.svg"),[*D* - Delta],[Manouvering with difficulty, keep clear],
-            image("res/flags/ICS_Echo.svg"),[*E* - Echo],[Altering course to starboard],
-            image("res/flags/ICS_Foxtrot.svg"),[*F* - Foxtrot],[Am disabled, communicate with me],
-            image("res/flags/ICS_Golf.svg"),[*G* - Golf],[Require a pilot],
-            image("res/flags/ICS_Hotel.svg"),[*H* - Hotel],[Pilot on board],
-            image("res/flags/ICS_India.svg"),[*I* - India],[Altering course to port],
-            image("res/flags/ICS_Juliett.svg"),[*J* - Juliet],[On fire and have or am leaking dangerous cargo],
-            image("res/flags/ICS_Kilo.svg"),[*K* - Kilo],[Wish to communicate],
+            image("res/flags/ICS_Delta.svg"),[*D* - Delta],[I am manouvering with difficulty, keep clear],
+            image("res/flags/ICS_Echo.svg"),[*E* - Echo],[I am altering course to starboard],
+            image("res/flags/ICS_Foxtrot.svg"),[*F* - Foxtrot],[I am disabled, communicate with me],
+            image("res/flags/ICS_Golf.svg"),[*G* - Golf],[I require a pilot],
+            image("res/flags/ICS_Hotel.svg"),[*H* - Hotel],[I have a pilot on board],
+            image("res/flags/ICS_India.svg"),[*I* - India],[I am altering course to port],
+            image("res/flags/ICS_Juliett.svg"),[*J* - Juliet],[I am on fire or leaking dangerous cargo],
+            image("res/flags/ICS_Kilo.svg"),[*K* - Kilo],[I wish to communicate],
             image("res/flags/ICS_Lima.svg"),[*L* - Lima],[Stop your vessel instantly],
             image("res/flags/ICS_Mike.svg"),[*M* - Mike],[I am stopped and not making way],
             image("res/flags/ICS_November.svg"),[*N* - November],[Negative],
             image("res/flags/ICS_Oscar.svg"),[*O* - Oscar],[Man overboard],
-            image("res/flags/ICS_Papa.svg"),[*P* - Papa],[About to sail, all report on board],
+            image("res/flags/ICS_Papa.svg"),[*P* - Papa],[I am about to sail, all report on board],
             image("res/flags/ICS_Quebec.svg"),[*Q* - Quebec],[Vessel is healthy, request pratique],
             image("res/flags/ICS_Romeo.svg"),[*R* - Romeo],[],
         ),
@@ -106,7 +214,7 @@
             columns: (55pt, auto, auto),
             rows: 35pt,
             align: left+horizon,
-            image("res/flags/ICS_Sierra.svg"),[*S* - Sierra],[Operating astern propulsion],
+            image("res/flags/ICS_Sierra.svg"),[*S* - Sierra],[I am operating astern propulsion],
             image("res/flags/ICS_Tango.svg"),[*T* - Tango],[Keep clear of me],
             image("res/flags/ICS_Uniform.svg"),[*U* - Uniform],[You are running into danger],
             image("res/flags/ICS_Victor.svg"),[*V* - Victor],[I require assistance],
@@ -151,3 +259,59 @@ TODO
 - *1* - Courtesy flag at highest position on starboard spreader
 - *2* - Signal flags below courtesy flag (Q Flag)
 - *3* - Custom flags, burgees and pennants on port spreader (below courtesy flag)
+
+= Boat knowledge
+
+== Rigs and sails
+
+=== Sails
+
+- Mainsail
+- Headsail
+
+=== Rigs
+
+- Sloop Rig
+- Cutter Rig
+- Solent Rig
+
+= Checklists
+
+== Boat preparation
+
+=== Ready for sea
+
+- Below deck
+  - #sym.ballot Passage planning
+  - #sym.ballot Start boat log
+  - #sym.ballot Instruments and radio on
+  - #sym.ballot Gear stowed, everything in shipshape
+  - #sym.ballot Hatches closed
+  - #sym.ballot Engine check (@engine_check)
+  - #sym.ballot Lockers shut & locked
+  - #sym.ballot Victualling
+  - #sym.ballot Lunch prepared
+- Above deck
+  - #sym.ballot Winch handles on deck
+  - #sym.ballot Hand-bearing compasses on deck
+  - #sym.ballot Instrument covers off and stowed below
+  - #sym.ballot Disconnect shore power
+  - #sym.ballot Remove sail cover
+  - #sym.ballot Prepare main halyard
+  - #sym.ballot Life jackets
+  - #sym.ballot Fill water tanks
+  - #sym.ballot Fill engine tank
+
+=== Engine check <engine_check>
+
+Use *W.O.B.B.L.E*.
+
+#table(
+    columns: (auto, auto),
+    [*W*], [Water tank should have sufficient water.],
+    [*O*], [Engine oil should be within markers. Wipe down oil indicator before performing test.],
+    [*B*], [Belt. Should be just stiff enough to turn roughly 90 degrees.],
+    [*B*], [Bilges. Check for water or oil leaks.],
+    [*L*], [Look around. Does anything look off?],
+    [*E*], [Exhaust. When starting the engine, check for water exhaust.],
+)
