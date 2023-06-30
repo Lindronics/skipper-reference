@@ -12,6 +12,57 @@
 = Terms
 
 
+= Mooring
+
+== Stern-to
+
+Stern-to mooring is especially common in the Mediterranean. If no bow lines are available, an anchor needs to be used instead. In some countries, it is common for a mariner to hold up a lazyline which needs to be picked up using the boat hook. 
+
+Stern fenders are necessary to prevent the boat colliding with the quay.
+
+#figure(
+    image(
+        "res/mooring/stern-to-with-lazylines.svg", 
+        height: 20%,
+    ),
+    caption: [
+        Mooring stern-to with two lazylines.
+    ]
+)
+
+== Alongside
+
+- Install fenders on expected side at water height.
+- Prepare bow and stern lines using the respective cleats. Have the crew ready to step off near the shrouds. Make sure the lines are on the outside of the guardrails.
+- If approaching a single sideways pontoon or wall (e.g. the fuel pontoon), approach at roughly a $45 #sym.degree$ angle. Switch to neutral. When the bow is roughly a meter from the pontoon, steer over all the way. The bow should turn away from the pontoon and the remaining momentum should be enough to slowly drift towards it.
+- Use a backwards burst to stop the boat. When next to pontoon/wall and stopped, have crew step off and run bow and stern lines around the appropriate cleats.
+- Adjust both lines until in desired position. Affix bow and stern lines.
+- If at mooring for longer time and there is a risk of surging, add springs. There are two possible setups for this, depending on the cleat situation on the boat and pontoon/wall. The line running towards the bow and stopping the boat from surging forwards is defined as the bow spring.
+
+#figure(
+    grid(
+        columns: (auto, auto),
+        image(
+            "res/mooring/alongside-a.svg", 
+            height: 20%,
+        ),
+        image(
+            "res/mooring/alongside-b.svg", 
+            height: 20%,
+        )
+    ),
+    caption: [
+        Mooring alongside with bow and stern lines as well as bow and stern springs. Springs can run either from amidships to pontoon cleats near the bow and stern, or from bow and stern cleats to a central cleat on the pontoon.
+    ],
+)
+
+== Mooring buoy
+
+- Prepare two lines coming off the bow cleats.
+- Approach the buoy slowly. Keep it to the side the rope was prepared on. When the buoy is just off the bow, and the boat is stopped, lassoo it with the rope. Immediately cross the ends of the rope to avoid the buoy slipping away.
+- Pull up the buoy. Attach it using the second line and tie it off. If the buoy is itself attached to the sea bed using a line, it can be directly attached to the cleat too. (TODO verify)
+- Remove the first line.
+
 
 = Radio
 
@@ -100,20 +151,17 @@ Should be sent if the calling station has a very urgent message concerning the s
 
 == VHF (Very High Frequency)
 
-VHF does not bend around obstacles. The horizon of a VHF antenna is approximately $s = 3 * sqrt(h)$, where $s$ is the horizon in nautical miles and $h$ is the height of the antenna in metres.
+VHF does not bend around obstacles. The horizon radius of a VHF antenna is approximately $r = 3 * sqrt(h)$, where $r$ is the horizon in nautical miles and $h$ is the height of the antenna in metres.
 
-Two antennas are in range of each other if their horizons overlap. Thus, the total range is approximately $s = 3 * (sqrt(h_a) + sqrt(h_b))$.
+Two antennas are in range of each other if their horizons overlap. Thus, the total range is approximately $r_(a+b) = 3 * (sqrt(h_a) + sqrt(h_b))$.
 
-High power is usually $25 W$ and low power is usually $1 W$.
+High power is usually $25 W$ on a VHF built into the boat. Low power is usually $1 W$.
 
 === Channels
 
 - Distress, safety and calling: *16*
 - Inter-ship: *6*, *8*, *72*, *77*
 - Port operations: *11*, *12*, *14*
-
-
-
 
 = Morse code
 
@@ -122,7 +170,6 @@ High power is usually $25 W$ and low power is usually $1 W$.
 - The space between parts of the same latter is one unit.
 - The space between letters is three units.
 - The space between words is seven units.
-
 
 #figure(
     table(
@@ -183,6 +230,10 @@ High power is usually $25 W$ and low power is usually $1 W$.
 
 = Flags
 
+Flags are said to be _worn_ by the yacht and _flown_ by the owner.
+
+The ideal flag size for a boat is dependent on its size. The ensign size should be roughly one inch for each foot of overall length. For other flags, it should be $1/2$ an inch for each foot of the highest mast above water.
+
 == ICS International Maritime Flags
 
 #figure(
@@ -241,11 +292,6 @@ High power is usually $25 W$ and low power is usually $1 W$.
 
 == Flag setup and etiquette
 
-=== Ensign
-
-TODO
-
-=== Courtesy flag
 
 #columns(2)[
     #figure(
@@ -263,6 +309,16 @@ TODO
     - *2* - Signal flags below courtesy flag (Q Flag)
     - *3* - Custom flags, burgees and pennants on port spreader (below courtesy flag)
 ]
+
+=== Ensign
+
+Ensigns are mandatory for all vessels and signify the country of registration. The ensign should be flown at all times when outside of port (TODO). It is to be flown at the most privileged position on the boat, i.e. as close to the stern as possible. 
+
+When in port, the ensign is traditionally hoisted at 09:00 in winter and 08:00 in summer, and lowered at 21:00. However, this tradition is hardly followed anymore.
+
+=== Courtesy flag
+
+When in the waters of a different country to the one the boat is registered in, host country's flag must be hoisted. This is called the courtesy flag. It is to be hoisted on the starbord spreader and should be higher than the ensign and other flags.
 
 = Boat knowledge
 
