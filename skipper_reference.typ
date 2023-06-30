@@ -5,7 +5,9 @@
   size: 10pt,
 )
 
-#outline()
+#outline(
+    indent: 1em
+)
 
 = Terms
 
@@ -100,7 +102,7 @@ Should be sent if the calling station has a very urgent message concerning the s
 
 VHF does not bend around obstacles. The horizon of a VHF antenna is approximately $s = 3 * sqrt(h)$, where $s$ is the horizon in nautical miles and $h$ is the height of the antenna in metres.
 
-Two antennas are in range of each other if their horizons overlap. The total range is approximately $s = 3 * (sqrt(h_a) + sqrt(h_b))$.
+Two antennas are in range of each other if their horizons overlap. Thus, the total range is approximately $s = 3 * (sqrt(h_a) + sqrt(h_b))$.
 
 High power is usually $25 W$ and low power is usually $1 W$.
 
@@ -245,20 +247,22 @@ TODO
 
 === Courtesy flag
 
-#figure(
-    image(
-        "res/flags/setup.svg", 
-        width: 30%,
-        fit: "contain",
-    ),
-    caption: [
-        Setup of flags excluding ensign
-    ]
-)
+#columns(2)[
+    #figure(
+        image(
+            "res/flags/setup.svg", 
+            width: 80%,
+            fit: "contain",
+        ),
+        caption: [
+            Setup of flags excluding ensign
+        ]
+    )
 
-- *1* - Courtesy flag at highest position on starboard spreader
-- *2* - Signal flags below courtesy flag (Q Flag)
-- *3* - Custom flags, burgees and pennants on port spreader (below courtesy flag)
+    - *1* - Courtesy flag at highest position on starboard spreader
+    - *2* - Signal flags below courtesy flag (Q Flag)
+    - *3* - Custom flags, burgees and pennants on port spreader (below courtesy flag)
+]
 
 = Boat knowledge
 
@@ -271,9 +275,15 @@ TODO
 
 === Rigs
 
-- Sloop Rig
-- Cutter Rig
-- Solent Rig
+#table(
+    columns: (auto, auto, auto),
+    rows: 160pt,
+    align: horizon,
+    image("res/rigs/sloop.svg"), [*Sloop*], [Main mast ahead of 40-60 point. Usually one jib or genoa.],
+    image("res/rigs/cutter.svg"), [*Cutter*], [Main mast behind 40-60 point. Two headsails (yankee and staysail). Not to be confused with Solent rig.],
+    image("res/rigs/ketch.svg"), [*Ketch*], [Mizzen mast ahead of the rudder post. Mizzen mast and main mast connected using a stay.],
+    image("res/rigs/yawl.svg"), [*Yawl*], [Mizzen mast astern of the rudder post. Mizzen mast stands on its own and is often only used for steering.]
+)
 
 = Checklists
 
@@ -281,37 +291,71 @@ TODO
 
 === Ready for sea
 
-- Below deck
-  - #sym.ballot Passage planning
-  - #sym.ballot Start boat log
-  - #sym.ballot Instruments and radio on
-  - #sym.ballot Gear stowed, everything in shipshape
-  - #sym.ballot Hatches closed
-  - #sym.ballot Engine check (@engine_check)
-  - #sym.ballot Lockers shut & locked
-  - #sym.ballot Victualling
-  - #sym.ballot Lunch prepared
-- Above deck
-  - #sym.ballot Winch handles on deck
-  - #sym.ballot Hand-bearing compasses on deck
-  - #sym.ballot Instrument covers off and stowed below
-  - #sym.ballot Disconnect shore power
-  - #sym.ballot Remove sail cover
-  - #sym.ballot Prepare main halyard
-  - #sym.ballot Life jackets
-  - #sym.ballot Fill water tanks
-  - #sym.ballot Fill engine tank
+#columns(2)[
+    - Below deck
+      - Passage planning
+      - Start boat log
+      - Instruments and radio on
+      - Gear stowed, everything in shipshape
+      - Hatches closed
+      - Engine check (@engine_check)
+      - Lockers shut & locked
+      - Victualling
+      - Lunch prepared
+    - Above deck
+      - Winch handles on deck
+      - Hand-bearing compasses on deck
+      - Instrument covers off and stowed below
+      - Disconnect shore power
+      - Remove sail cover
+      - Prepare main halyard
+      - Life jackets
+      - Fill water tanks
+      - Fill engine tank
+]
 
 === Engine check <engine_check>
 
-Use *W.O.B.B.L.E*.
+    - *W* ater tank should have sufficient water.
+    - *O* ngine oil should be within markers. Wipe down oil indicator before performing test.
+    - *B* elt. Should be just stiff enough to turn roughly 90 degrees.
+    - *B* ilges. Check for water or oil leaks.
+    - *L* ook around. Does anything look off?
+    - *E* xhaust. When starting the engine, check for water exhaust.
 
-#table(
-    columns: (auto, auto),
-    [*W*], [Water tank should have sufficient water.],
-    [*O*], [Engine oil should be within markers. Wipe down oil indicator before performing test.],
-    [*B*], [Belt. Should be just stiff enough to turn roughly 90 degrees.],
-    [*B*], [Bilges. Check for water or oil leaks.],
-    [*L*], [Look around. Does anything look off?],
-    [*E*], [Exhaust. When starting the engine, check for water exhaust.],
-)
+== Safety
+
+=== Short: Three Fs
+
+- Fire
+- Flooding
+- 
+
+=== Long
+
+#columns(2)[
+  - Below deck
+    - Gas
+    - Fire prevention
+    - Fire extinguishers
+    - First aid box
+    - Heads and shower pump
+    - Provisioning
+    - Sea cocks
+    - Engine
+    - Galley
+    - Life jackets and life lines
+    - Flares
+    - Emergency VHF aerial
+    - VHF
+    - Control panel switches
+    - GPS, plotter and port navigation
+  - Above deck
+    - Heaving line
+    - Lifebelt, drogues and danbuoy
+    - Liferaft
+    - Abandon ship routine
+    - Engine
+    - Slips and falls
+    - Winch and line safety
+]
