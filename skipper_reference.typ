@@ -9,14 +9,51 @@
     indent: 1em
 )
 
-= Terms
+#pagebreak()
 
+= General
+
+== Terms
+
+#columns(
+    2,
+    [
+        / abaft: Towards the stern
+        / abeam: On the beam; at right angles to centre line
+        / ahead: Forward; towards the bow
+        / astern: Backwards; towards the stern
+        / cable: Anchor chain/line
+        / fender: Cushion for preventing damage to a boat; hung from the guard rails
+        / foul: Entangled or entwined; e.g. _foul anchor_
+        / guard rails: Cables or ropes 
+        / hawser: TODO
+        / heaving to: Put the boat into a stable position TODO
+        / helm: Steering of the boat; helmsman
+        / hull speed: speed at which the wavelength of the boat's bow wave equals its hull length
+        / jack stays: TODO
+        / lazy line: TODO
+        / mooring: Attaching a boat to shore by rope
+        / stanchions: Posts that hold the guard rails
+        / tender: Dinghy for moving people and supplies to and from a ship
+        / warp: A rope for warping or mooring a craft
+    ]
+)
+
+== Common units
+
+#table(
+    columns: (auto, auto, auto, auto),
+    [*Symbol*], [*Name*], [*SI conversion*], [*Definition*],
+    [_M, NM, nmi_], [nautical mile], [$1852m$], [one arc minute of latitude],
+    [], [cable length], [$185.2m$], [$1/10$ of a nautical mile],
+    [], [fathom], [$1.829m$], [$~1/100$ of a cable],
+)
 
 = Mooring
 
 == Stern-to
 
-Stern-to mooring is especially common in the Mediterranean. If no bow lines are available, an anchor needs to be used instead. In some countries, it is common for a mariner to hold up a lazyline which needs to be picked up using the boat hook. 
+Stern-to mooring is especially common in the Mediterranean. If no bow lines are available, an anchor needs to be used instead. In some countries, it is common for a mariner to hold up a lazy line which needs to be picked up using the boat hook. 
 
 Stern fenders are necessary to prevent the boat colliding with the quay.
 
@@ -26,7 +63,7 @@ Stern fenders are necessary to prevent the boat colliding with the quay.
         height: 20%,
     ),
     caption: [
-        Mooring stern-to with two lazylines.
+        Mooring stern-to with two lazy lines.
     ]
 )
 
@@ -62,6 +99,33 @@ Stern fenders are necessary to prevent the boat colliding with the quay.
 - Approach the buoy slowly. Keep it to the side the rope was prepared on. When the buoy is just off the bow, and the boat is stopped, lassoo it with the rope. Immediately cross the ends of the rope to avoid the buoy slipping away.
 - Pull up the buoy. Attach it using the second line and tie it off. If the buoy is itself attached to the sea bed using a line, it can be directly attached to the cleat too. (TODO verify)
 - Remove the first line.
+
+== Anchoring
+
+#pagebreak()
+
+= Navigation
+
+== Running fix
+
+A running fix can be performed if only a single reference point is available. The geometry is shown in @running_fix.
+
+- Step *A*: Take a true bearing #sym.alpha to the reference point. Take note of the log. 
+- Sail a steady course and take note of the true heading #sym.gamma. Wait until the bearing to the reference point has noticeably changed.
+- Step *B*: Take another bearing #sym.beta to the reference point. Read off the log and calculate the distance traveled since the first reading $d$.
+- Using the observed distance and heading, draw a vector starting from the reference point. If a reasonable guess can be made, you can apply leeway and tides to the vector. Draw the second bearing #sym.beta.
+- Starting from the end of the vector, draw a line along the initial bearing #sym.alpha. The intersection of this line and the second bearing #sym.beta is the current position of the boat.
+
+#figure(
+    image(
+        "res/fix/running_fix.svg", 
+        width: 40%,
+        fit: "contain",
+    ),
+    caption: [
+        Visualisation of a running fix. The red lines show the first and second bearing, and the course vector. The blue lines are parallel lines to the first bearing and course, which can be used to obtain an intersection with the second bearing line.
+    ]
+)<running_fix>
 
 
 = Radio
@@ -289,6 +353,8 @@ The ideal flag size for a boat is dependent on its size. The ensign size should 
     ),
     caption: [ICS International maritime signal flags]
 )
+
+#pagebreak()
 
 == Flag setup and etiquette
 
