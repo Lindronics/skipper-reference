@@ -27,7 +27,7 @@
         / foul: Entangled or entwined; e.g. _foul anchor_
         / guard rails: Cables or ropes 
         / hawser: TODO
-        / heaving to: Put the boat into a stable position TODO
+        / heaving to: Put the boat into a stable position, usually achieved by backing the foresail (@heave_to)
         / helm: Steering of the boat; helmsman
         / hull speed: speed at which the wavelength of the boat's bow wave equals its hull length
         / jack stays: TODO
@@ -41,12 +41,14 @@
 
 == Common units
 
-#table(
-    columns: (auto, auto, auto, auto),
-    [*Symbol*], [*Name*], [*SI conversion*], [*Definition*],
-    [_M, NM, nmi_], [nautical mile], [$1852m$], [one arc minute of latitude],
-    [], [cable length], [$185.2m$], [$1/10$ of a nautical mile],
-    [], [fathom], [$1.829m$], [$~1/100$ of a cable],
+#figure(
+    table(
+        columns: (auto, auto, auto, auto),
+        [*Symbol*], [*Name*], [*SI conversion*], [*Definition*],
+        [_M, NM, nmi_], [nautical mile], [$1852m$], [one arc minute of latitude],
+        [], [cable length], [$185.2m$], [$1/10$ of a nautical mile],
+        [], [fathom], [$1.829m$], [$~1/100$ of a cable],
+    )
 )
 
 = Mooring
@@ -101,6 +103,36 @@ Stern fenders are necessary to prevent the boat colliding with the quay.
 - Remove the first line.
 
 == Anchoring
+
+#pagebreak()
+
+= Maneuvers
+
+== Heaving to<heave_to>
+
+#figure(
+    image(
+        "res/maneuvers/hove_to.svg", 
+        width: 30%,
+        fit: "contain",
+    ),
+    caption: [
+        A boat in a hove-to position. The jib is backed, pushing the bow to leeward. The rudder is set all the way to windward, pushing the bow up. If the boat falls off, the mainsail will power up and help push the bow back up.
+    ]
+)
+
+== Man overboard recovery
+
+#figure(
+    image(
+        "res/maneuvers/mob_sail_a.svg", 
+        width: 50%,
+        fit: "contain",
+    ),
+    caption: [
+        MOB recovery under sail with engine assistance.
+    ]
+)<mob_sail_a>
 
 #pagebreak()
 
@@ -399,7 +431,7 @@ When in the waters of a different country to the one the boat is registered in, 
 
 #table(
     columns: (auto, auto, auto),
-    rows: 160pt,
+    rows: 140pt,
     align: horizon,
     image("res/rigs/sloop.svg"), [*Sloop*], [Main mast ahead of 40-60 point. Usually one jib or genoa.],
     image("res/rigs/cutter.svg"), [*Cutter*], [Main mast behind 40-60 point. Two headsails (yankee and staysail). Not to be confused with Solent rig.],
