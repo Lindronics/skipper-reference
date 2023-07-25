@@ -10,7 +10,7 @@ jobs:
       - name: Pull changes
         uses: actions/checkout@v1
       - name: Compile typst file
-        run: typst --watch skipper_reference.typ skipper_reference.pdf
+        run: typst skipper_reference.typ skipper_reference.pdf
       - name: Upload dissertation artifact
         uses: actions/upload-artifact@master
         with:
