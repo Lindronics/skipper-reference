@@ -1,0 +1,18 @@
+name: typst build
+
+on: [push]
+jobs:
+  build_typst:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/typst/typst:v0.6.0
+    steps:
+      - name: Pull changes
+        uses: actions/checkout@v1
+      - name: Compile typst file
+        run: typst compile skipper_reference.typ skipper_reference.pdf
+      - name: Upload dissertation artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: skipper_reference
+          path: skipper_reference.pdf
