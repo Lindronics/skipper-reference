@@ -14,5 +14,5 @@ jobs:
       - name: Upload dissertation artifact
         uses: actions/upload-artifact@master
         with:
-          name: latest pdf
+          name: skipper_reference
           path: skipper_reference.pdf
