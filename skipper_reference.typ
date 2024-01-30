@@ -1,4 +1,4 @@
-#import "plugins/typst-boxes.typ": *
+#import "@preview/colorful-boxes:1.2.0": *
 
 #set heading(numbering: "1.")
 #set text(
