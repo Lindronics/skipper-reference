@@ -123,6 +123,12 @@ Stern fenders are necessary to prevent the boat colliding with the quay.
 
 == Man overboard recovery
 
+=== Using sail and engine by heaving-to
+
+@mob_sail_a shows how to recover a MOB using sails and engine. 
+
+- *Step A* immediately after the MOB, change to a close-hauled course.
+
 #figure(
     image(
         "res/maneuvers/mob_sail_a.svg", 
@@ -418,6 +424,12 @@ When in port, the ensign is traditionally hoisted at 09:00 in winter and 08:00 i
 
 When in the waters of a different country to the one the boat is registered in, host country's flag must be hoisted. This is called the courtesy flag. It is to be hoisted on the starbord spreader and should be higher than the ensign and other flags.
 
+= Weather
+
+== Swell
+
+A wave can capsize the boat if it is higher than $1/3$ of the boat length, is a breaking wave, and reaches the boat abeam.
+
 = Boat knowledge
 
 == Rigs and sails
@@ -483,7 +495,7 @@ When in the waters of a different country to the one the boat is registered in, 
 
 - Fire
 - Flooding
-- 
+- ?
 
 === Long
 
@@ -513,3 +525,6 @@ When in the waters of a different country to the one the boat is registered in, 
     - Slips and falls
     - Winch and line safety
 ]
+
+= Appendix
+
