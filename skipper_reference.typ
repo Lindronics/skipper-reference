@@ -265,6 +265,102 @@ High power is usually $25 W$ on a VHF built into the boat. Low power is usually 
 - Inter-ship: *6*, *8*, *72*, *77*
 - Port operations: *11*, *12*, *14*
 
+= Tides
+
+== Tidal heights
+
+=== Secondary ports
+
+Tide tables aren't always available for every port. For secondary ports, the times and heights of high water and low water can be obtained by applying a correction to those of the primary port. 
+
+The time of high/low water at the secondarty port $t_P$ is thus given as $t_P = t_S + Delta t$, where $t_S$ is the time at the standard port and $Delta t$ is the correction.
+
+These corrections are usually supplied as two values that apply at $0000, 1200$ and $0600, 1800$.
+
+#figure(
+    table(
+        columns: (auto, auto),
+        [*Times [hhmm]*], [*Height [m]*],
+        table(
+            columns: (auto, auto),
+            stroke: none,
+            [High water (HW)], [Low water (LW)],
+            table(
+                columns: (40pt, 40pt),
+                [0000], [0600],
+                [1200], [1800],
+            ),
+            table(
+                columns: (40pt, 40pt),
+                [0000], [0600],
+                [1200], [1800],
+            ),
+        ),
+        table(
+            columns: auto,
+            rows: auto,
+            stroke: none,
+            table(
+                columns: (40pt, 40pt, 40pt, 40pt),
+                stroke: none,
+                [MHWS], [MHWN], [MLWN], [MLWS],
+            ),
+            table(
+                columns: (40pt, 40pt, 40pt, 40pt),
+                [4.8], [3.9], [1.4], [0.5],
+            ),
+        ),
+        table(
+            columns: (auto, auto),
+            stroke: none,
+            align: left,
+            [Differences ($Delta t$)], [],
+            table(
+                columns: (40pt, 40pt),
+                align: center,
+                [-0052], [-0002],
+            ),
+            table(
+                columns: (40pt, 40pt),
+                align: center,
+                [-0052], [-0002],
+            ),
+        ),
+        table(
+            columns: (auto),
+            stroke: none,
+            align: left,
+            [Differences ($Delta h$)],
+            table(
+                columns: (40pt, 40pt, 40pt, 40pt),
+                align: center,
+                [+1.8], [+0.6], [-0.3], [+0.1],
+            ),
+        ),
+    )
+)
+
+Values in between the explicitly stated times must be acquired through linear interpolation. Thus, the formula for caluclating the correction $Delta t$ for any given high water time in the standard port $t_S$ is as follows:
+
+#figure(
+    $Delta t = Delta t_1 + frac((t_S - t_1), (t_2 - t_1)) (Delta t_2 - Delta t_1)$
+)
+
+where $Delta t_1$ is the correction at the start of the window (obtained from the table) and $Delta t_2$ is the correction at the end of the window (also obtained from the table).
+
+Thus, the time of high/low water at the secondary port is obtained as follows:
+
+#figure(
+    $t_P = t_S + Delta t_1 + frac((t_S - t_1), (t_2 - t_1)) (Delta t_2 - Delta t_1)$
+)
+
+The height of high water or low water at the secondary port $H_P$ can be determined in a similar fashion, by interpolating between the mean springs and neaps values.
+
+#figure(
+    $h_P = h_S + Delta h_"springs" + frac((h_S - h_"springs"), (h_"neaps" - h_"springs")) (Delta h_"neaps" - Delta h_"springs")$
+)
+
+
 = Morse code
 
 - The length of a dot is one unit.
@@ -275,7 +371,7 @@ High power is usually $25 W$ on a VHF built into the boat. Low power is usually 
 
 #figure(
     table(
-        columns: (auto ,auto, auto),
+        columns: (auto, auto, auto),
         align: left,
         stroke: none,
         table(
