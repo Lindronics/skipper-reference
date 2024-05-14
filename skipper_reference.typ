@@ -522,6 +522,10 @@ When in the waters of a different country to the one the boat is registered in, 
 
 = Weather
 
+== Wind
+
+TODO Beaufort Scale
+
 == Swell
 
 A wave can capsize the boat if it is higher than $1/3$ of the boat length, is a breaking wave, and reaches the boat abeam.
