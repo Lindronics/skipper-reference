@@ -203,7 +203,7 @@ Should only be sent in case of grave an imminent danger to life or vessel. Use c
     We are sinking. \
     We require immediate assistance. \
     There are 5 people on board. \
-    We are abandoning to the live raft. \
+    We are abandoning to the life raft. \
     Over.
 ]
 
@@ -362,6 +362,8 @@ The height of high water or low water at the secondary port $H_P$ can be determi
 
 == Tidal streams
 
+=== Course to steer
+
 The diagram for working out CTS and SOG based on tidal set and drift, as well as a desired COG and an estimated boat STW, constitutes a triangle which is not guaranteed to have a right angle. Thus, we cannot use plain trigonometric identities to perform this calculation.
 
 $
@@ -416,6 +418,29 @@ By applying the cosine rule we end up with the following.
               &= sqrt(v_"STW"^2 - v_"tide"^2 + 2 v_"STW" v_"drift" cos(theta_"COG" - theta_"tide"))
     $
 )
+
+=== Estimated position
+
+For calculating the estimated position, we can add the vectors of the tidal drift and set, as well as the boat speed and course through the water, to obtain an estimated course and speed over the ground.
+
+This is mathematically possible using simple trigonometry and linear alegbra. However, this one might actually be much more useful to draw out on the map.
+
+We must first convert our vectors from polar to cartesian form. In the following example, we use the first dimension `x` to represent longitude and `y` to represent latitude, which is the definition of a cartesian plane. This can be a bit confusing, given that it is the norm to specify coordinates in the transposed Lat-Lon form. 
+
+Given a vector $accent(a, arrow) = d angle theta$, we can calculate the cartesian form as follows:
+
+$ vec(x, y) = vec(d cos(theta), d sin(theta)) $
+
+Converting back into polar form is painful. There is a $"arctan2"$ function available in many maths libraries that takes care of computing the below formula for the correct quadrant, but this is not present on most calculators.
+
+$ 
+    theta &= cases(
+        arctan(y/x) &"if" x >= 0 and y >= 0 \
+        arctan(y/x) + 360 degree &"if" x < 0 and y >= 0 \
+        arctan(y/x) + 180 degree &"if" y < 0
+    ) \
+    d &= sqrt(x^2 + y^2)
+$
 
 
 = Morse code
