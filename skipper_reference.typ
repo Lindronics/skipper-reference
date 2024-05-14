@@ -360,6 +360,63 @@ The height of high water or low water at the secondary port $H_P$ can be determi
     $h_P = h_S + Delta h_"springs" + frac((h_S - h_"springs"), (h_"neaps" - h_"springs")) (Delta h_"neaps" - Delta h_"springs")$
 )
 
+== Tidal streams
+
+The diagram for working out CTS and SOG based on tidal set and drift, as well as a desired COG and an estimated boat STW, constitutes a triangle which is not guaranteed to have a right angle. Thus, we cannot use plain trigonometric identities to perform this calculation.
+
+$
+    & theta_"COG" &&= "COG (course over groud), known" \
+    & theta_"CTS" &&= "CTS (course to steer), unknown" \
+    & theta_"tide" &&= "Tidal set, known" \
+    & v_"SOG" &&= "SOG (speed over groud) [kn], unknown" \
+    & v_"STW" &&= "STW (speed through the water) [kn], known" \
+    & v_"tide" &&= "Tidal drift [kn], known"
+$
+
+#figure(
+    image(
+        "res/tides/course_to_steer.svg", 
+        width: 70%,
+        fit: "contain",
+    ),
+    caption: [
+        Vector diagram used to determine course to steer ($"CTS"$).
+    ]
+)<cts>
+
+@cts demonstrates that that $alpha = theta_"COG" - theta_"tide"$ and $gamma = theta_"CTS" - theta_"COG"$.
+
+We can make use of the sine and cosine rules to calculate the course to steer.
+Remember to set the calculator to degree mode, unless you fancy instructing your helm using a course measured in radians.
+
+#figure(
+    $
+        sin(alpha)/a = sin(beta)/b = sin(gamma)/c & "(sine rule)" \
+        a^2 = b^2 + c^2 - 2 b c cos(alpha) & "(cosine rule)" \
+        alpha + beta + gamma = 180 degree & "(sum of angles)"
+    $,
+)
+
+By applying the sine rule, it follows that
+
+#figure(
+    $
+        theta_"CTS" &= theta_"COG" + gamma \ 
+                    &= theta_"COG" + arcsin(v_"tide" / v_"STW" sin(theta_"COG" - theta_"tide"))
+    
+    $
+)
+
+Working out the expected SOG is more complicated. 
+By applying the cosine rule we end up with the following.
+
+#figure(
+    $
+        "SOG" &= sqrt(v_"STW"^2 - v_"tide"^2 + 2 v_"STW" v_"drift" cos(alpha)) \
+              &= sqrt(v_"STW"^2 - v_"tide"^2 + 2 v_"STW" v_"drift" cos(theta_"COG" - theta_"tide"))
+    $
+)
+
 
 = Morse code
 
@@ -524,7 +581,9 @@ When in the waters of a different country to the one the boat is registered in, 
 
 == Wind
 
-TODO Beaufort Scale
+=== The Beaufort Scale
+
+
 
 == Swell
 
@@ -551,6 +610,29 @@ A wave can capsize the boat if it is higher than $1/3$ of the boat length, is a 
     image("res/rigs/yawl.svg"), [*Yawl*], [Mizzen mast astern of the rudder post. Mizzen mast stands on its own and is often only used for steering.]
 )
 
+= Passage Planning
+
+== Appraisal
+
+- Vessel information (name, class, seaworthiness, callsign, MMSI)
+- Crew (experience, preferences, condition)
+- Date/time
+- Estimated duration, distance
+- Weather conditions
+ 
+== Planning
+
+- Sunrise and sunset
+- 
+- Determine route and waypoints
+- Identify and note down dangers along the route
+-
+- Ports of refuge
+
+== Execution
+
+== Monitoring
+
 = Checklists
 
 == Boat preparation
@@ -568,6 +650,7 @@ A wave can capsize the boat if it is higher than $1/3$ of the boat length, is a 
       - Lockers shut & locked
       - Victualling
       - Lunch prepared
+
     - Above deck
       - Winch handles on deck
       - Hand-bearing compasses on deck
