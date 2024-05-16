@@ -144,6 +144,26 @@ Stern fenders are necessary to prevent the boat colliding with the quay.
 
 = Navigation
 
+== Pilotage
+
+
+#figure(
+    grid(
+        columns: (20%, 20%),
+        image(
+            "res/fix/zone_diagram_ahead.svg",
+            width: 100%,
+            fit: "contain"
+        ),
+        image(
+            "res/fix/zone_diagram_astern.svg",
+            width: 100%,
+            fit: "contain"
+        )
+    ),
+    caption: [Diagrams indicating coloured zones of a light house ahead (left) or astern (right).]
+)
+
 == Running fix
 
 A running fix can be performed if only a single reference point is available. The geometry is shown in @running_fix.
@@ -427,17 +447,17 @@ This is mathematically possible using simple trigonometry and linear alegbra. Ho
 
 We must first convert our vectors from polar to cartesian form. In the following example, we use the first dimension `x` to represent longitude and `y` to represent latitude, which is the definition of a cartesian plane. This can be a bit confusing, given that it is the norm to specify coordinates in the transposed Lat-Lon form. 
 
-Given a vector $accent(a, arrow) = d angle theta$, we can calculate the cartesian form as follows:
+Given a vector $accent(a, arrow) = d angle theta$, where $0 degree < theta <= 360 degree$, we can calculate the cartesian form as follows:
 
 $ vec(x, y) = vec(d cos(theta), d sin(theta)) $
 
 Converting back into polar form is painful. There is a $"arctan2"$ function available in many maths libraries that takes care of computing the below formula for the correct quadrant, but this is not present on most calculators.
 
 $ 
-    theta &= cases(
-        arctan(y/x) &"if" x >= 0 and y >= 0 \
-        arctan(y/x) + 360 degree &"if" x < 0 and y >= 0 \
-        arctan(y/x) + 180 degree &"if" y < 0
+    theta &= arctan(y/x) + cases(
+        0 degree &"if" x >= 0 and y >= 0 \
+        360 degree &"if" x < 0 and y >= 0 \
+        180 degree &"if" y < 0
     ) \
     d &= sqrt(x^2 + y^2)
 $
