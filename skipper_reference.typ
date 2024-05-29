@@ -4,6 +4,13 @@
 #set text(
   size: 10pt,
 )
+#set page(
+    header: [
+        #h(1fr)
+        _Niklas' Skipper Companion_
+    ],
+    numbering: "1"
+)
 
 #outline(
     indent: 1em
@@ -161,7 +168,7 @@ Stern fenders are necessary to prevent the boat colliding with the quay.
             fit: "contain"
         )
     ),
-    caption: [Diagrams indicating coloured zones of a light house ahead (left) or astern (right).]
+    caption: [Diagrams indicating coloured sectors of a light house ahead (left) or astern (right).]
 )
 
 == Running fix
@@ -430,12 +437,15 @@ By applying the sine rule, it follows that
 )
 
 Working out the expected SOG is more complicated. 
-By applying the cosine rule we end up with the following.
+By applying the sum of angles rule for triangles and the cosine rule we end up with the following.
 
 #figure(
     $
-        "SOG" &= sqrt(v_"STW"^2 - v_"tide"^2 + 2 v_"STW" v_"drift" cos(alpha)) \
-              &= sqrt(v_"STW"^2 - v_"tide"^2 + 2 v_"STW" v_"drift" cos(theta_"COG" - theta_"tide"))
+        beta &= 180 degree - alpha - gamma \
+             &= 180 degree - (theta_"COG" - theta_"tide") - arcsin(v_"tide" / v_"STW" sin(theta_"COG" - theta_"tide")) \
+        "SOG" &= sqrt(v_"STW"^2 + v_"tide"^2 - 2 v_"STW" v_"drift" cos(beta)) \
+              &= sqrt(v_"STW"^2 + v_"tide"^2 - 2 v_"STW" v_"drift" cos(180 degree - alpha - gamma)) \
+              &= sqrt(v_"STW"^2 + v_"tide"^2 - 2 v_"STW" v_"drift" cos(180 degree - alpha - gamma))
     $
 )
 
@@ -719,39 +729,113 @@ A wave can capsize the boat if it is higher than $1/3$ of the boat length, is a 
 
 == Safety
 
-=== Short: Three Fs
+=== Short safety brief: Three Fs
 
 - Fire
+ - Gas
 - Flooding
-- ?
+ - Location of bilge pump
+- Falling overboard
+ - Life vests
+ - Harnesses
 
-=== Long
+#pagebreak()
+
+=== Full safety brief
 
 #columns(2)[
-  - Below deck
-    - Gas
-    - Fire prevention
-    - Fire extinguishers
-    - First aid box
-    - Heads and shower pump
-    - Provisioning
-    - Sea cocks
-    - Engine
-    - Galley
-    - Life jackets and life lines
-    - Flares
-    - Emergency VHF aerial
+
+==== Below deck
+
+- Gas
+    - Heavier than air
+    - Location and usage of stopcocks
+    - Location of gas bottles
+    - Routine for gas spillage
+    - Gas sensors and alarm
+    - Manual bilge pump location
+- Fire prevention
+    - No smoking
+    - Never leave hob unattended
+    - Turn off gas at stopcock
+- Fire extinguishers
+    - Locations
+    - Types
+    - Fire blanket
+    - Engine fire
+- First aid box
+    - Everyday box
+    - Cat C box
+- Heads and shower pump
+    - Operating procedure
+- Provisioning/victualling
+- Sea cocks
+    - Location
+    - Presence of bungs
+- Engine
+    - WOBBLE (@engine_check)
+- Galley
+    - Always wear strong bottoms when cooking at sea
+    - Galley strap
+    - Always clean spillages right away
+    - Only half-fill mugs in half water
+    - Pour boiling water into mugs over the sink
+    - Put kettle spout on fore-aft line
+- Life jackets and life lines
+    - Location
+    - Assign one to each crew member and make sure they fit
+    - Check $"CO"_2$ canister and green tags
+    - Light, spray hood and whistle
+    - When to wear
+    - Clip on points and jackstays, never guard rails
+    - Clip in before exiting companionway and after entering
+- Flares
+    - Location
+    - Types
+    - When and how to use
+    - Check expiry dates
+- Emergency VHF aerial location
+- VHF
+    - Basic operation (on/off, squelch, channels, push-to-talk)
+    - Mayday call procedure (check instruction poster)
+    - Location and battery charge of handheld radio
+- Control panel switches
+    - Nav and cabin lights
+    - Water tank and battery indicators
+    - GPS
     - VHF
-    - Control panel switches
-    - GPS, plotter and port navigation
-  - Above deck
-    - Heaving line
-    - Lifebelt, drogues and danbuoy
-    - Liferaft
-    - Abandon ship routine
-    - Engine
-    - Slips and falls
-    - Winch and line safety
+    - Fridge
+    - Bilge pump
+    - Battery isolators
+    - Shore power
+- GPS, plotter and port navigation
+    - MOB button
+
+==== Above deck
+
+- Heaving line
+- Lifebelt, drogues and danbuoy
+- Liferaft
+    - Securing points, check painter
+    - When to launch
+    - How to launch
+- Abandon ship routine
+    - Lifejackets
+    - Mayday
+    - Bring flares, handheld VHF, EPIRB, grab-bag, water
+- Engine
+    - Batteries
+    - How to start and stop
+- Slips, falls, other dangers
+    - One hand for yourself, one for the boat
+    - Step off, don not jump onto pontoon
+    - Danger of boom
+    - Do not fend off using body parts
+- Winch and line safety
+    - Winch and jammer operation
+    - Never release a jammer without having at least one turn around the winch
+    - Keep fingers clear of winch
+    - Winch handle location
 ]
 
 = Appendix
