@@ -716,6 +716,7 @@ A wave can capsize the boat if it is higher than $1/3$ of the boat length, is a 
       - Life jackets
       - Fill water tanks
       - Fill engine tank
+      - Ensign (and courtesy flag)
 ]
 
 === Engine check <engine_check>
