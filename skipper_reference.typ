@@ -636,13 +636,97 @@ When in the waters of a different country to the one the boat is registered in, 
 
 == Wind
 
-=== The Beaufort Scale
+=== The Beaufort Scale (UKMO)
+
+#table(
+    columns: 8,
+    table.header([*Beaufort*], [*Mean wind speed [kn]*], [*Limits of wind speed [kn]*], [*Description*], [*Probable mean wave height [m]*], [*Probable maximum wave height [m]*], [*Sea state*], [*Sea description*]),
+    [*0*], [0], [$<1$], [Calm], [-], [-], [0], [Calm (glassy)],
+    [*1*], [2], [$1-3$], [Light air], [0.1], [0.1], [1], [Calm (rippled)],
+    [*2*], [5], [$4-6$], [Light breeze], [0.2], [0.3], [2], [Smooth (wavelets)],
+    [*3*], [9], [$7-10$], [Gentle breeze], [0.6], [1.0], [3], [Slight],
+    [*4*], [13], [$11-16$], [Moderate breeze], [1.0], [1.5], [$3-4$], [Slight-Moderate],
+    [*5*], [19], [$17-21$], [Fresh breeze], [2.0], [2.5], [4], [Moderate],
+    [*6*], [24], [$22-27$], [Strong breeze], [3.0], [4.0], [5], [Rough],
+    [*7*], [30], [$28-33$], [Near gale], [4.0], [5.5], [$5-6$], [Rough-Very rough],
+    [*8*], [37], [$34-40$], [Gale], [5.5], [7.5], [$6-7$], [Very rough-High],
+    [*9*], [44], [$41-47$], [Strong gale], [7.0], [10.0], [7], [High],
+    [*10*], [52], [$48-55$], [Storm], [9.0], [12.5], [8], [Very high],
+    [*11*], [60], [$56-63$], [Violent storm], [11.5], [16], [8], [Very high],
+    [*12*], [-], [$>64$], [Hurricane], [$>14$], [-], [9], [Phenomenal],
+)
+
+=== Reefing suggestions
+
+#table(
+    columns: 4,
+    table.header([*Beaufort*], [*Conditions*], [*Main*], [*Fore*]),
+    [0], [Drifting or under engine], [Stowed or possibly full to steady yacht's motion.], [Furled],
+    [1], [Drifting or under engine, possibly motor-sailing], [Stowed or possibly full to steady yacht's motion.], [Furled if motor-sailing, else fully out],
+    [2], [Able to sail if fair tide], [Full], [Full],
+    [3], [Calm, gentle sailing], [Full], [Full],
+    [4], [Sails fully powered, good sailing], [Full, possibly one reef], [Full, possibly slightly furled],
+    [5], [Berthing more difficult, inexperienced crew might get nervous], [Reef one], [Possibly slightly furled],
+    [6], [Challenging conditions, consider seeking shelter], [Reef one or two], [$1/3$ furled away],
+    [7], [Unpleasant in unsheltered waters, limit for inexperienced skippers], [Reef two or three], [$2/3$ furled away],
+    [8], [Potentially dangerous outside sheltered waters if inexperienced. Upwind sailing difficult.], [Reef three or tri-sail], [mostly furled away or storm-jib],
+    [9], [Dangerous, seek shelter], [Reef three or tri-sail], [storm-jib],
+    [10], [Survival conditions, upwind sailing impossible], [tri-sail or none], [storm-jib],
+)
 
 
 
 == Swell
 
 A wave can capsize the boat if it is higher than $1/3$ of the boat length, is a breaking wave, and reaches the boat abeam.
+
+== Marine forecast glossary
+
+#columns(
+    2,
+    [
+        === Time
+        / Imminent: $<6h$ from issue time
+        / Soon: $6h-12h$ from issue time
+        / Later: $>12h$ from issue time
+
+        === Gale warnings
+        / Gale: Winds of at least F8
+        / Severe gale: Winds of at least F9
+        / Storm: Winds of at least F10
+        / Violent storm: Winds of at least F11
+        / Hurricane force: Winds of at least F12
+
+        === Visibility
+        / Very poor: $<1000m$
+        / Poor: $1000m-2M$
+        / Moderate: $2M-5M$
+        / Good: $>5M$
+
+        === Sea state
+        / Smooth: Wave height $<0.5m$
+        / Slight: Wave height $0.5m-1.25m$
+        / Moderate: Wave height $1.25m-2.5m$
+        / Rough: Wave height $2.5m-4.0m$
+        / Very rough: Wave height $4.0m-6.0m$
+        / High: Wave height $6.0m-9.0m$
+        / Very high: Wave height $9.0m-14.0m$
+        / Phenomenal: Wave height $>14.0m$
+
+        === Wind
+        / Becoming cyclonic: Considerable direction change across the path of a depression
+        / Veering: Turning clockwise
+        / Backing: Turning anticlockwise
+
+        === Movement of pressure systems
+        / Slowly: $<15"kn"$
+        / Steadily: $15"kn"-25"kn"$
+        / Rather quickly: $25"kn"-35"kn"$
+        / Rapidly: $35"kn"-45"kn"$
+        / Very rapidly: $>45"kn"$
+    ]
+)
+
 
 = Boat knowledge
 
@@ -669,24 +753,34 @@ A wave can capsize the boat if it is higher than $1/3$ of the boat length, is a 
 
 == Appraisal
 
-- Vessel information (name, class, seaworthiness, callsign, MMSI)
-- Crew (experience, preferences, condition)
-- Date/time
-- Estimated duration, distance
-- Weather conditions
+- Vessel information (name, class, seaworthiness, draught, stability, range, callsign, MMSI)
+- Crew (size, experience, preferences, condition)
+- Charts, almanac, other relevant publications
  
 == Planning
 
+- Date/time
+- Estimated duration, distance
+- Weather and environmental conditions
 - Sunrise and sunset
-- 
-- Determine route and waypoints
-- Identify and note down dangers along the route
--
-- Ports of refuge
+- Route and waypoints
+- Dangers and restrictions along the route
+- Tidal depths
+- Method and frequency of position fixing
+- Ports of refuge and contingency plans
 
 == Execution
 
+Prior to execution:
+
+- Condition of navigation equipment
+- ETAs at critical points
+- Weather forecast
+
 == Monitoring
+
+- Fixes
+- Weather changes
 
 = Checklists
 
@@ -698,13 +792,17 @@ A wave can capsize the boat if it is higher than $1/3$ of the boat length, is a 
     - Below deck
       - Passage planning
       - Start boat log
-      - Instruments and radio on
+      - Instruments and VHF on
       - Gear stowed, everything in shipshape
       - Hatches closed
       - Engine check (@engine_check)
       - Lockers shut & locked
       - Victualling
-      - Lunch prepared
+      - Navigation lights at night
+      - Tools and spares
+      - Status of batteries
+      - Gas shut off
+      - Relevant charts and pilotage notes accessible
 
     - Above deck
       - Winch handles on deck
@@ -838,6 +936,28 @@ A wave can capsize the boat if it is higher than $1/3$ of the boat length, is a 
     - Keep fingers clear of winch
     - Winch handle location
 ]
+
+== Customs
+
+=== Documents
+
+- Vessel
+  - Ship registration
+  - VAT invoice
+  - Insurance certificate
+  - Radio licence
+  - Life-raft service certificate
+
+- Skipper
+  - Skipper licence (e.g. ICC)
+  - VHF licence
+
+- Everyone
+  - Passports
+  - Visas
+  - EHIC
+
+- Form C1331
 
 = Appendix
 
