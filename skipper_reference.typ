@@ -749,6 +749,29 @@ A wave can capsize the boat if it is higher than $1/3$ of the boat length, is a 
     image("res/rigs/yawl.svg"), [*Yawl*], [Mizzen mast astern of the rudder post. Mizzen mast stands on its own and is often only used for steering.]
 )
 
+== The Engine
+
+A well-maintained diesel engine will burn roughly $0.22 l / ("hp" h)$. E.g. a $100 "hp"$ engine will burn $22 l/h$.
+
+Power is roughly proportional to the cube of the shaft speed. It follows that fuel consumption based on revs and engine power can be described as follows:
+
+#figure(
+    $x [l/h] = 0.22 * (P_"max" ["hp"]) * (T_"current" / T_"max")^3$ 
+)
+
+A $100 "hp"$ engine at $80%$ RPM will develop rougly $50 "hp"$, consuming about $11 l/h$ of diesel.
+
+The vessel's hull speed can be described as follows:
+
+#figure(
+    $v_"hull" ["kn"] = 1.34 * sqrt(s_"LWL" ["ft"])$
+)
+
+Efficient crusing speed tends to be around $70% - 80%$ of the hull speed, but varies from vessel to vessel.
+
+
+
+
 = Passage Planning
 
 == Appraisal
