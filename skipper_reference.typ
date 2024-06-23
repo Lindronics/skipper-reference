@@ -192,6 +192,12 @@ A running fix can be performed if only a single reference point is available. Th
     ]
 )<running_fix>
 
+== Geographical Range of Lighthouses
+
+#figure(
+    $s [M] = 2.075 * (sqrt(h_"eye" [m]) + sqrt(h_"light" [m]))$
+)
+
 
 = Radio
 
@@ -756,7 +762,7 @@ A well-maintained diesel engine will burn roughly $0.22 l / ("hp" h)$. E.g. a $1
 Power is roughly proportional to the cube of the shaft speed. It follows that fuel consumption based on revs and engine power can be described as follows:
 
 #figure(
-    $x [l/h] = 0.22 * (P_"max" ["hp"]) * (T_"current" / T_"max")^3$ 
+    $x [l/h] = 0.22 * (P_"max" ["hp"]) * (f_"current" / f_"max")^3$ 
 )
 
 A $100 "hp"$ engine at $80%$ RPM will develop rougly $50 "hp"$, consuming about $11 l/h$ of diesel.
