@@ -60,30 +60,44 @@
 
 = Mooring
 
+== Regional Differences
+
+
+
 == Stern-to
 
-Stern-to mooring is especially common in the Mediterranean. If no bow lines are available, an anchor needs to be used instead. In some countries, it is common for a mariner to hold up a lazy line which needs to be picked up using the boat hook. 
+Stern-to mooring is especially common in the Mediterranean. The boat is moored using two stern lines and one or two bow lines. In some countries, it is common for a "marinero" to assist mooring. In this case, it is not required for crew to step off.
 
-Stern fenders are necessary to prevent the boat colliding with the quay.
+The most common form of bow line is a "lazy line". These are lines which are attached to the pontoon on one end, and to a ring on the sea floor ahead of the bow on the other end. If no bow lines are available, an anchor needs to be used instead.
+
+Since stern-to mooring usually implies that boats wil be moored right next to each other without being separated by a finger pontoon, fenders should be mounted at boat-height on both sides. There should be a strong emphasis on protecting the widest part of the boat. The quarter is usually less exposed than during side-to mooring. Additionally, a stern fender might be useful.
 
 #figure(
     image(
         "res/mooring/stern-to-with-lazylines.svg", 
-        height: 20%,
+        height: 30%,
     ),
     caption: [
         Mooring stern-to with two lazy lines.
     ]
 )
 
+The ideal procedure for stern-to mooring involves several steps:
+
+1. Motor backwards towards the quaywall. It is recommended to face astern to improve visibility. Once close enough to the pontoon, stop the boat with a short burst of forward power.
+2. Attach two stern lines to cleats on the pontoon. This is done either by crew stepping off or by a marinero assisting the maneuver. The lines should be slightly longer than the desired final position of the boat (1m longer is a good starting value). As soon as the lines are attached, engage forward power to keep them under tension. This will prevent the bow from being pushed sideways.
+3. Pick up the lazy lines which should be attached to the pontoon. This is usually done using the boat hook. There might only be one, but two is ideal. Walk the lazy line forward to the bow, making sure to keep the pontoon end slack, so it will not get pulled underneath the boat, fouling the propeller. Attach the lazy lines to the bow cleats, pulling the bow end as tight as possible.
+4. Once lazy lines are attached, motor backwards to test whether they have good tension to hold the boat in the desired position. Take up the slack in the stern lines. The boat should now be tightly moored.
+
 == Alongside
 
-- Install fenders on expected side at water height.
-- Prepare bow and stern lines using the respective cleats. Have the crew ready to step off near the shrouds. Make sure the lines are on the outside of the guardrails.
-- If approaching a single sideways pontoon or wall (e.g. the fuel pontoon), approach at roughly a $45 #sym.degree$ angle. Switch to neutral. When the bow is roughly a meter from the pontoon, steer over all the way. The bow should turn away from the pontoon and the remaining momentum should be enough to slowly drift towards it.
-- Use a backwards burst to stop the boat. When next to pontoon/wall and stopped, have crew step off and run bow and stern lines around the appropriate cleats.
-- Adjust both lines until in desired position. Affix bow and stern lines.
-- If at mooring for longer time and there is a risk of surging, add springs. There are two possible setups for this, depending on the cleat situation on the boat and pontoon/wall. The line running towards the bow and stopping the boat from surging forwards is defined as the bow spring.
+When mooring alongside to a finger pontoon or quay wall, put as many fenders as possible on the side that will face the pontoon. Make sure to use the adequate height for the pontoon. The quarter will be exposed, so make sure to protect it with a strong fender.
+
+1. Prepare bow and stern lines using the respective cleats. Have the crew ready to step off near the shrouds. Make sure the lines are on the outside of the guardrails.
+2. If approaching a single sideways pontoon or wall (e.g. the fuel pontoon), approach at roughly a $45 #sym.degree$ angle. Switch to neutral. When the bow is roughly a meter from the pontoon, steer hard over away from the pontoon. If you are uncomfortable with the size of the boat, have a crew member at the bow or shrouds announce the distance. The bow should turn away from the pontoon and the remaining momentum should be enough to slowly drift towards it.
+3. Use a backwards burst to stop the boat. When next to pontoon and stopped, have crew step off and run bow and stern lines around the appropriate cleats.
+4. Adjust both lines until in desired position. Affix bow and stern lines.
+5. If at mooring for longer time and there is a risk of surging, add springs. There are two possible setups for this, depending on the cleat situation on the boat and pontoon/wall. The line running towards the bow and stopping the boat from surging forwards is defined as the bow spring.
 
 #figure(
     grid(
@@ -102,12 +116,21 @@ Stern fenders are necessary to prevent the boat colliding with the quay.
     ],
 )
 
+=== Using a Midship Line
+
+This makes mooring alongside significantly easier and is recommended if the boat has a midship cleat.
+
+1. Rig a warp to the midship cleat. 
+2. When next to the pontoon, have crew step off and attach the midship line first, cleating off immediately. This will keep the boat stopped and attached to the pontoon while finishing the maneouver.
+3. Use the rudder and small amounts of power to pivot the boat around the midship line and align the bow in the desired position. 
+4. Finally, attach bow and stern lines as described above. If short-handed, prepare the bow and stern lines by festooning them over the guardrails. This way the crew that has stepped off can easily pick them up.
+
 == Mooring buoy
 
-- Prepare two lines coming off the bow cleats.
-- Approach the buoy slowly. Keep it to the side the rope was prepared on. When the buoy is just off the bow, and the boat is stopped, lassoo it with the rope. Immediately cross the ends of the rope to avoid the buoy slipping away.
-- Pull up the buoy. Attach it using the second line and tie it off. If the buoy is itself attached to the sea bed using a line, it can be directly attached to the cleat too. (TODO verify)
-- Remove the first line.
+1. Prepare two lines coming off the bow cleats.
+2. Approach the buoy slowly. Keep it to the side the rope was prepared on. When the buoy is just off the bow, and the boat is stopped, lassoo it with the rope. Immediately cross the ends of the rope to avoid the buoy slipping away.
+3. Pull up the buoy. Attach it using the second line and tie it off. If the buoy is itself attached to the sea bed using a line, it can be directly attached to the cleat too. (TODO verify)
+4. Remove the first line.
 
 == Anchoring
 
@@ -130,11 +153,9 @@ Stern fenders are necessary to prevent the boat colliding with the quay.
 
 == Man overboard recovery
 
-=== Using sail and engine by heaving-to
+=== Using Sail and Engine by Heaving To ("Crash-Tack")
 
 @mob_sail_a shows how to recover a MOB using sails and engine. 
-
-- *Step A* immediately after the MOB, change to a close-hauled course.
 
 #figure(
     image(
@@ -146,6 +167,10 @@ Stern fenders are necessary to prevent the boat colliding with the quay.
         MOB recovery under sail with engine assistance.
     ]
 )<mob_sail_a>
+
+- *Step A* immediately after the MOB, change to a close-hauled course.
+- *Step B* start the engine. After three boat lengths, heave to by tacking without changing the foresail over.
+- *Step C* when hove to, the boat should be slowly drifting downwind towards the casualty. Use the engine to move forwards or backwards. Aim to keep the casualty near the shrouds.
 
 #pagebreak()
 
